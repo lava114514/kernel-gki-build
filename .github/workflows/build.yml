@@ -46,7 +46,7 @@ jobs:
 
       - name: Build images
         run: |
-          wget -O common/build.config.gki https://raw.githubusercontent.com/bugme2/kernel-gki-build/main/build.config.gki
+          #wget -O common/build.config.gki https://raw.githubusercontent.com/bugme2/kernel-gki-build/main/build.config.gki
           sed -i 's/ -dirty//g' common/scripts/setlocalversion
           sed -i 's/return mode == THERMAL_DEVICE_ENABLED/return mode == THERMAL_DEVICE_DISABLED/' common/drivers/thermal/thermal_core.c
           #sed -i 's/DKSU_VERSION=16/DKSU_VERSION=11628/' common/drivers/kernelsu/Makefile
